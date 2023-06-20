@@ -10,19 +10,12 @@ export class AppComponent {
   nome = 'Matteo';
   label = 'logo di cibando';
 
-  allievi = [
-    {nome: 'Matteo',
-  cognome: 'Forcina',
-  eta: 29},
-  {nome: 'Mario',
-  cognome: 'Rossi',
-  eta: 25},
-  {nome: 'Enrico',
-  cognome: 'Bianchi',
-  eta: 45},
-  {nome: 'Carlo',
-  cognome: 'Verdi',
-  eta: 35}
+  percorso = '../assets/image/imageBg-';
+
+  images = [
+    {id: 1, label: 'Spaghetti al pomodoro'},
+    {id: 2, label: 'Tagliata di manzo'},
+    {id: 3, label: 'Tiramisù classico'},
   ];
 
 }

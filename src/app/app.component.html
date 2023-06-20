@@ -18,23 +18,26 @@
   </nav>
 </header>
 
+<div *ngIf="images.length === 1">
+  <div class="picsum-img-wrapper">
+    <img [src]="percorso + images[0].id + '.jpg'" [alt]="images[0].label" />
+  </div>
+</div>
+
+<ngb-carousel *ngIf="images.length > 1">
+<ng-template *ngFor="let image of images" ngbSlide>
+<div class="picsum-img-wrapper">
+  <img [src]="percorso + image.id + '.jpg'" [alt]="image.label" />
+</div>
+<div class="carousel-caption">
+  <h3>{{image.label}}</h3>
+</div>
+</ng-template>
+</ngb-carousel>
+
 <div class="container-title">
   <h2>App di Esempio di {{nome}}</h2>
   <p class="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque perferendis repellat aperiam ea magni? Voluptatum laborum saepe, ullam atque nulla amet repellat ea quisquam numquam eos ipsam autem quos iste?</p>
-</div>
-
-<div>
-  <ul *ngIf="allievi.length > 0">
-    <li>
-      Allo stato attuale ci sono {{allievi.length}} allievi.
-    </li>
-    <li *ngFor="let allievo of allievi">
-      Nome: {{allievo.nome}}, Cognome: {{allievo.cognome}}, Età {{allievo.eta}}
-    </li>
-  </ul>
-  <div *ngIf="allievi.length == 0">
-      Ancora non ci sono allievi
-  </div>
 </div>
 
 <router-outlet></router-outlet>

@@ -5,5 +5,32 @@ body {
     font-family: 'Montserrat', sans-serif!important;
 }
 
+.carousel {
+  .carousel-inner {
+    margin-top: 1px!important;
+  }
+
+  .carousel-caption {
+    h3 {
+      font-family: "Homemade Apple", cursive;
+      font-size: 40px;
+      text-shadow: black 2px 3px 3px;
+    }
+  }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.picsum-img-wrapper {
+  margin-top: 1px!important;
+
+  img {
+    width: 100%!important;
+    // height: 510px;
+  }
+}
+
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
