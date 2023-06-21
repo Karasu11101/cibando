@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "primeicons/primeicons.css";
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
 body {
     font-family: 'Montserrat', sans-serif!important;
 }
@@ -23,14 +25,32 @@ body {
     height: 4rem;
   }
 }
+
+.contenitore {
+  width: 100%;
+  padding: 20px, 30px;
+
+  h2 {
+    font-size: 35px;
+    font-weight: bold;
+  };
+
+  p {
+    font-size: 12px;
+    text-align: justify!important;
+  }
+
+}
+
 .picsum-img-wrapper {
   margin-top: 1px!important;
 
   img {
     width: 100%!important;
-    // height: 510px;
   }
 }
 
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+.testoEvidenziato {
+  background-color: yellow;
+  width: 400px;
+}

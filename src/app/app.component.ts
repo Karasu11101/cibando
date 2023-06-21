@@ -5,17 +5,22 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'cibando';
   nome = 'Matteo';
-  label = 'logo di cibando';
 
-  percorso = '../assets/image/imageBg-';
+  colore = 'red';
+  coloreScelto: string;
 
-  images = [
-    {id: 1, label: 'Spaghetti al pomodoro'},
-    {id: 2, label: 'Tagliata di manzo'},
-    {id: 3, label: 'Tiramisù classico'},
-  ];
+  evidenziato = false;
+
+  cambiaSwitch() {
+    this.colore = this.coloreScelto;
+  }
+
+  onEvidenziazione() {
+    this.evidenziato = !this.evidenziato;
+  }
 
 }
