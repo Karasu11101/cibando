@@ -12,5 +12,4 @@ export class CarouselComponent {
     {id: 2, label: 'Tagliata di manzo'},
     {id: 3, label: 'Tiramisù classico'},
   ];
-
 }

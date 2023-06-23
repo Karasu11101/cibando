@@ -1,0 +1,10 @@
+<ngb-carousel>
+  <ng-template *ngFor="let food of images; let i = index" ngbSlide>
+  <div class="bg-pic" style="height: 200px;">
+    <img src="../../../assets/image/black-bg/black.jpg" />
+  </div>
+  <div class="carousel-caption">
+    <h3 style="padding-bottom: 20px;">{{food.title}}</h3>
+  </div>
+  </ng-template>
+  </ngb-carousel>

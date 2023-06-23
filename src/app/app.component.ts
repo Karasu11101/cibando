@@ -7,20 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'cibando';
-  nome = 'Matteo';
-
-  colore = 'red';
-  coloreScelto: string;
-
-  evidenziato = false;
-
-  cambiaSwitch() {
-    this.colore = this.coloreScelto;
-  }
-
-  onEvidenziazione() {
-    this.evidenziato = !this.evidenziato;
-  }
 
 }
