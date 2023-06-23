@@ -10,7 +10,6 @@ import { RecipesService } from 'src/app/services/recipes.service';
 })
 export class RecipesComponent {
   ricette: Recipe[];
-  
 
   constructor(private recipesService: RecipesService, private router: Router) {}
 

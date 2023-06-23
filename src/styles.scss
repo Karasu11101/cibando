@@ -3,6 +3,7 @@
 @import "primeicons/primeicons.css";
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+@import './styles/colors.scss';
 body {
     font-family: 'Montserrat', sans-serif!important;
 }
@@ -11,19 +12,21 @@ body {
   .carousel-inner {
     margin-top: 1px!important;
   }
-
+  .carousel-title {
+    clear: both;
+  }
   .carousel-caption {
     h3 {
       font-family: "Homemade Apple", cursive;
       font-size: 40px;
-      text-shadow: black 2px 3px 3px;
+      text-shadow: $secondary-color-1 2px 3px 3px;
     }
   }
 
   .carousel-control-prev-icon, .carousel-control-next-icon {
     width: 4rem;
     height: 4rem;
-    background-color: #8e2108;
+    background-color: $primary-color-1;
     border-radius: 50%;
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RECIPES } from 'src/app/mocks/recipe.mock';
 
 @Component({
@@ -7,6 +7,6 @@ import { RECIPES } from 'src/app/mocks/recipe.mock';
   styleUrls: ['./carousel2.component.scss']
 })
 export class Carousel2Component {
-  percorso = '../assets/image/black-bg/black';
-  images = RECIPES;
+  @Input() percorso: string;
+  @Input() images = RECIPES;
 }

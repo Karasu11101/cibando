@@ -1,5 +1,7 @@
+@import "../../../styles/colors.scss";
+
 .bg-red {
-    background-color: #8e2108!important;
+    background-color: $primary-color-1!important;
 }
 .logo {
     width: 60px;

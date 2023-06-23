@@ -1,8 +1,11 @@
+@import "../../../styles/colors.scss";
+
 footer {
-  background-color: #8e2108!important;
-  color: white;
+  background-color: $primary-color-1!important;
+  color: $secondary-color-5;
   height: 300px;
   padding: 20px;
+  clear: both;
 
   .logo {
     width: 80px!important;
