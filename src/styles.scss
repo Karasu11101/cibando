@@ -8,7 +8,7 @@ body {
     font-family: 'Montserrat', sans-serif!important;
 }
 
-.carousel {
+.picture-carousel {
   .carousel-inner {
     margin-top: 1px!important;
   }
@@ -23,6 +23,32 @@ body {
     }
   }
 
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: $primary-color-1;
+    border-radius: 50%;
+  }
+}
+
+.textCarousel {
+  clear: both!important;
+  height: 150px;
+  padding-top: 30px;
+  vertical-align: bottom;
+  .carousel-inner {
+    margin-top: 1px!important;
+  }
+  .picture {
+    clear: both!important;
+  }
+  .carousel-caption2 {
+    h3 {
+      font-family: "Homemade Apple", cursive;
+      font-size: 40px;
+      text-shadow: $secondary-color-1 2px 3px 3px;
+    }
+  }
   .carousel-control-prev-icon, .carousel-control-next-icon {
     width: 4rem;
     height: 4rem;

@@ -11,9 +11,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
-import { Carousel2Component } from './components/carousel2/carousel2.component';
 import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component';
 import { DetailComponent } from './components/recipes/detail/detail.component';
+import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +24,9 @@ import { DetailComponent } from './components/recipes/detail/detail.component';
     RecipesComponent,
     HomeComponent,
     NotfoundComponent,
-    Carousel2Component,
     RecipeCardComponent,
-    DetailComponent
+    DetailComponent,
+    RecipesListComponent
   ],
   imports: [
     BrowserModule,

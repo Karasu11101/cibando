@@ -4,10 +4,12 @@
       <div class="card-image" [ngStyle]="{'background-image': 'url(' + recipe.image + ')'}"></div>
       <div class="card-body">
         <h5 class="card-title">{{recipe.title}} - cod: {{recipe._id}}</h5>
-        <p class="card-text">{{recipe.description}}</p>
-        <a routerLink="/dettaglio/{{recipe._id}}" class="btn btn-primary">Visualizza</a>
+        <p class="card-text">{{recipe.description | slice: 0:accorciaTesto(recipe.description)}} ...</p>
+        <!-- <a routerLink="/ricette/dettaglio/{{recipe.title}}/{{recipe._id}}" class="btn btn-primary">Visualizza</a> -->
+        <a routerLink="/ricette/dettaglio/{{recipe.title}}/{{recipe._id}}" class="btn btn-primary">Visualizza</a>
         <!-- <a [routerLink]="'dettaglio/'+recipe._id" class="btn btn-primary">Visualizza</a> -->
       </div>
     </div>
   </div>
 </div>
+

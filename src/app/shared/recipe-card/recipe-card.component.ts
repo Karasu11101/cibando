@@ -8,4 +8,14 @@ import { Recipe } from 'src/app/models/recipe.model';
 })
 export class RecipeCardComponent {
   @Input() recipes: Recipe[];
+
+  accorciaTesto(descrizione: string): number {
+    let lunghezzaMassima = 180;
+    if(descrizione.length <= lunghezzaMassima) {
+      return lunghezzaMassima;
+    } else {
+      let ultimoSpazio = descrizione.lastIndexOf(' ', lunghezzaMassima);
+      return ultimoSpazio;
+    }
+  }
 }
