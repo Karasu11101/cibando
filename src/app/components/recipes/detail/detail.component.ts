@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RecipesService } from 'src/app/services/recipes.service';
 import { Recipe } from 'src/app/models/recipe.model';
+import { take, first } from 'rxjs';
 
 @Component({
   selector: 'app-detail',
@@ -23,7 +24,9 @@ export class DetailComponent implements OnInit {
 
   onGetRecipe(): void {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('_id'));
-    this.recipeService.getRecipe(id).subscribe({
+    this.recipeService.getRecipe(id).pipe(
+      take(1)
+    ).subscribe({
       next: (res) => {
         this.ricetta = res;
       },
