@@ -61,6 +61,17 @@ body {
   }
 }
 
+.p-inputtext {
+  border: none!important;
+  width: 100%!important;
+  padding: 0rem!important;
+}
+
+.p-input-icon-right > i:last-of-type {
+  right: -8.5rem!important;
+  color: #6c757d;
+}
+
 .contenitore {
   width: 100%;
   padding: 20px;
