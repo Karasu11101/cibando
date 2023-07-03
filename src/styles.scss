@@ -15,13 +15,13 @@ body {
   .carousel-title {
     clear: both;
   }
-  .carousel-caption {
-    h3 {
-      font-family: "Homemade Apple", cursive;
-      font-size: 40px;
-      text-shadow: $secondary-color-1 2px 3px 3px;
-    }
-  }
+  // .carousel-caption {
+  //   h3 {
+  //     font-family: "Homemade Apple", cursive!important;
+  //     font-size: 40px;
+  //     text-shadow: $secondary-color-1 2px 3px 3px;
+  //   }
+  // }
 
   .carousel-control-prev-icon, .carousel-control-next-icon {
     width: 4rem;
@@ -37,6 +37,7 @@ body {
   padding-top: 30px;
   vertical-align: bottom;
   background-color: black;
+  align-items: center!important;
 
   .carousel-inner {
     margin-top: 1px!important;
@@ -47,7 +48,7 @@ body {
   }
   .carousel-caption2 {
     h3 {
-      font-family: "Homemade Apple", cursive;
+      font-family: "Homemade Apple", cursive!important;
       font-size: 40px;
       text-shadow: $secondary-color-1 2px 3px 3px;
       color: white!important;
@@ -99,4 +100,23 @@ body {
 .testoEvidenziato {
   background-color: yellow;
   width: 400px;
+}
+
+.carousel-caption {
+  h3 {
+    font-family: "Homemade Apple", cursive!important;
+    font-size: 40px;
+    text-shadow: $secondary-color-1 2px 3px 3px;
+    padding-bottom: 30px;
+  }
+}
+
+.carousel-caption2 {
+  h3 {
+    font-family: "Homemade Apple", cursive!important;
+    font-size: 40px;
+    text-shadow: $secondary-color-1 2px 3px 3px;
+    color: white!important;
+
+  }
 }

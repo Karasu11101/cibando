@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-registration',
@@ -16,8 +18,16 @@ export class RegistrationComponent {
     accetto: new FormControl(false, Validators.requiredTrue)
   })
 
+  constructor(private router: Router, private userService: UserService) {}
+
   onSubmit(){
     console.log(this.form.value);
+    const user = {
+      name: this.form.value.name,
+      email: this.form.value.email
+    }
+    this.userService.datiUtente.next(user);
+    this.router.navigateByUrl('home');
   }
 
   checkPassword(): boolean {
@@ -28,5 +38,9 @@ export class RegistrationComponent {
     } else {
       return false;
     }
+  }
+
+  rerout() {
+    this.router.navigateByUrl('home')
   }
 }
