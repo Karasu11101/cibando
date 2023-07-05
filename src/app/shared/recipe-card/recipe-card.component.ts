@@ -8,6 +8,8 @@ import { Recipe } from 'src/app/models/recipe.model';
 })
 export class RecipeCardComponent {
   @Input() recipes: Recipe[];
+  page = 1;
+  ricettePerPagina = 4;
 
   accorciaTesto(descrizione: string): number {
     let lunghezzaMassima = 180;
@@ -17,5 +19,10 @@ export class RecipeCardComponent {
       let ultimoSpazio = descrizione.lastIndexOf(' ', lunghezzaMassima);
       return ultimoSpazio;
     }
+  }
+
+  paginate(e) {
+    e.page = e.page + 1;
+    this.page = e.page;
   }
 }

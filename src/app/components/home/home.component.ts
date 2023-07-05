@@ -1,14 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Recipe } from 'src/app/models/recipe.model';
 import { RecipesService } from 'src/app/services/recipes.service';
 import { take, first } from 'rxjs';
 import { UserService } from 'src/app/services/user.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('modalRegistration', {static: false}) modal: ElementRef;
+
   title = 'cibando';
 
   nome: string;
@@ -25,23 +29,17 @@ export class HomeComponent implements OnInit {
 
   page: string;
 
-  constructor(private recipesService: RecipesService, private userService: UserService){}
+  constructor(private recipesService: RecipesService, private userService: UserService, private modalService: NgbModal){}
 
   ngOnInit(): void {
     this.onGetRecipes();
     this.page = 'home';
 
     this.userService.datiUtente.subscribe((res: any) => {
-        // localStorage.setItem('name', res.name);
-        // localStorage.setItem('email', res.email);
         this.nome = res.name;
         this.email = res.email;
+        // this.open(this.modal);
       });
-
-      // if(localStorage.getItem('name')) {
-      //   this.nome = localStorage.getItem('name');
-      //   this.email = localStorage.getItem('email');
-      // }
   }
 
   onGetRecipes() {
@@ -75,4 +73,17 @@ export class HomeComponent implements OnInit {
     this.nome = '';
     this.email = '';
   }
+
+  // open(content: any) {
+  //   if(this.modal) {
+  //     this.modalService.open(content, {ariaLabelledBy: 'modale riepilogo registrazione', size: 'lg', centered: true});
+  //     this.userService.datiUtente.next(''); // è necessario svuotare la sorgente, altrimenti il replay continuerà a caricare i dati memorizzati
+  //     this.nome = '';
+  //     this.email = '';
+  //   }
+  //   // this.modalService.open(content, {ariaLabelledBy: 'modale riepilogo registrazione', size: 'lg', centered: true});
+  //   //     this.userService.datiUtente.next(''); // è necessario svuotare la sorgente, altrimenti il replay continuerà a caricare i dati memorizzati
+  //   // this.nome = '';
+  //   // this.email = '';
+  // }
 }

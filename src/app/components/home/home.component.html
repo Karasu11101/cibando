@@ -11,19 +11,41 @@
   <div class="overlay">
     <div id="background">
       <p class="title">Grazie {{nome}} per esserti registrato! Di seguito troverai i dettagli del tuo nuovo account:</p>
-      <div class="user-data">
-        <div id="secondary-title">Nome:
-          <div id="name">
-            {{nome}}
-          </div>
-        </div>
-        <div id="secondary-title">Email:
-          <div id="email">
-            {{email}}
-          </div>
-        </div>
-      </div>
+      <ul class="user-data">
+        <li>Nome: <strong>{{nome}}</strong></li>
+        <li>Email: <strong>{{email}}</strong></li>
+      </ul>
       <button id="close-button" (click)="closeWindow()">CHIUDI</button>
     </div>
   </div>
 </ng-template>
+
+<!-- MODALE CON BOOTSTRAP -->
+<!-- <ng-template #modalRegistration let-modal>
+  <div class="overlay">
+    <div id="background">
+      <div class="modal-header">
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+      </div>
+      <div class="modal-body">
+        <p class="title">Grazie {{nome}} per esserti registrato! Di seguito troverai i dettagli del tuo nuovo account:</p>
+        <div class="user-data">
+          <div id="secondary-title">Nome:
+            <div id="name">
+              {{nome}}
+            </div>
+          </div>
+          <div id="secondary-title">Email:
+            <div id="email">
+              {{email}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn" aria-label="cancel" (click)="modal.close()">CHIUDI</button>
+      </div>
+    </div>
+  </div>
+</ng-template> -->
